@@ -255,12 +255,14 @@ p {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 2px solid #848c99;
+  border: 2px solid black;
+  display: inline-block;
   margin-right: 5px;
+  background-color: #848c90; /* Color gris para los círculos no pintados */
 }
 
 .filled {
-  background-color: #03a9f4;
+  background-color: #03a9f4; /* Color azul para los círculos pintados */
 }
 
 .circle-container {
