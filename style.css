@@ -256,10 +256,14 @@ p {
   height: 20px;
   border-radius: 50%;
   border: 2px solid black;
-  display: inline-block;
   margin-right: 5px;
 }
 
 .filled {
   background-color: black;
+}
+
+.circle-container {
+  display: flex;
+  gap: 5px; /* Espaciado entre los círculos */
 }
