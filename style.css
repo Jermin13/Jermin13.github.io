@@ -255,7 +255,7 @@ p {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 2px solid black;
+  border: 2px #848c90;
   display: inline-block;
   margin-right: 5px;
   background-color: #848c90; /* Color gris para los círculos no pintados */
