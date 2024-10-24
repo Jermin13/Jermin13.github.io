@@ -214,22 +214,6 @@ p {
   background: #03a9f4;
 }
 
-/* Nueva clase para las bolitas de porcentaje */
-.ContactoInfo.idiomas .porcentaje {
-  display: flex;
-  gap: 5px;
-}
-
-.ContactoInfo.idiomas .porcentaje .bolita {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #081921;
-}
-
-.ContactoInfo.idiomas .porcentaje .bolita.activa {
-  background: #03a9f4;
-}
 
 .intereses li {
   display: inline-block;
