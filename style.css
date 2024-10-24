@@ -255,12 +255,12 @@ p {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 2px solid black;
+  border: 2px solid #848c99;
   margin-right: 5px;
 }
 
 .filled {
-  background-color: black;
+  background-color: #03a9f4;
 }
 
 .circle-container {
