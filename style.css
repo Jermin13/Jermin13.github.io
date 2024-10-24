@@ -44,7 +44,7 @@ body
 
 .perfil_texto .perfil_imagen
 {
- position: relattive;
+  position: relattive;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -146,9 +146,11 @@ h4
 {
   position: relative;
   width: 100%;
-  height: 6px;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
   background: #081921;
-  display: block;
+  gap: 5px;
   margin-top: 5px;
 }
 .ContactoInfo.idiomas .porcentaje
