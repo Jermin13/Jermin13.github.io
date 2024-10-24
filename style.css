@@ -1,57 +1,54 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
 }
-body
-{
+
+body {
   background: lightblue;
-  display: fles;
+  display: flex;
   justify-content: center;
-  aling-items: center;
+  align-items: center;
   min-height: 100vh;
 }
-.container
-{
+
+.container {
   position: relative;
   width: 100%;
-  max-width: 1000p;
+  max-width: 1000px;
   min-height: 1000px;
   background: #fff;
   margin: 50px;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  box-shadow: 0 35px 55px (0,0,0,0.1);
+  box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
 }
 
-
-.container .lado_izquierdo
-{
+.container .lado_izquierdo {
   position: relative;
-  background:#003147;
+  background: #003147;
   padding: 40px;
 }
-.perfil_texto 
-{
+
+.perfil_texto {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 20px;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.perfil_texto .perfil_imagen
-{
-  position: relattive;
+.perfil_imagen {
+  position: relative;
   width: 200px;
   height: 200px;
   border-radius: 50%;
   overflow: hidden;
 }
-.perfil_texto .perfil_imagen img 
-{
+
+.perfil_imagen img {
   top: 0;
   left: 0;
   width: 100%;
@@ -59,9 +56,9 @@ body
   object-fit: cover;
 }
 
-.estilo_texto_perfil{
+.estilo_texto_perfil {
   color: #fff;
-  font-size: 1.5 em;
+  font-size: 1.5em;
   margin-top: 20px;
   text-transform: uppercase;
   text-align: center;
@@ -69,203 +66,169 @@ body
   line-height: 1.4em;
 }
 
-.estilo_texto_perfil span{
+.estilo_texto_perfil span {
   font-size: 0.8em;
   font-weight: 200;
 }
 
-.ContactoInfo
-{
+.ContactoInfo {
   padding-top: 40px;
-
 }
-.titulo 
-{
-  color:#fff;
+
+.titulo {
+  color: #fff;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
 }
 
-.ContactoInfo 
-ul {
-  position: relative;
-}
-.ContactoInfo 
-ul li {
+.ContactoInfo ul {
   position: relative;
   list-style: none;
-  margin: 10px;
-  cursor: pointer
 }
 
-.ContactoInfo 
-ul li .icono
-{
+.ContactoInfo ul li {
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.icono {
   display: inline-block;
   width: 30px;
-  font-size:18px;
+  font-size: 18px;
   color: #03a9f4;
 }
 
-.ContactoInfo 
-ul li span
-{
+.texto_icono {
   color: #fff;
   font-weight: 300;
   font-size: 18px;
 }
 
-.ContactoInfo.educacion 
-li
-{
+.ContactoInfo.educacion li {
   margin-bottom: 15px;
 }
 
-.ContactoInfo.educacion 
-h5
-{
+.ContactoInfo.educacion h5 {
   color: #03a9f4;
   font-weight: 500;
 }
-.ContactoInfo.educacion 
-h4:nth-child(2)
-{
-  color: #fff;
-  font-weight: 600;
-}
-.ContactoInfo.educacion 
-h4
-{
-  
+
+.ContactoInfo.educacion h4 {
   color: #fff;
   font-weight: 100;
 }
 
-.ContactoInfo.idiomas .porcentaje
-{
-  position: relative;
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: flex-start;
-  background: #081921;
-  gap: 5px;
-  margin-top: 5px;
+.ContactoInfo.educacion h4:nth-child(2) {
+  font-weight: 600;
 }
-.ContactoInfo.idiomas .porcentaje
-div{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background: #03a9f4
-}
-.container .lado_derecho{
+
+.container .lado_derecho {
   position: relative;
-  background:#fff;
+  background: #fff;
   padding: 40px;
 }
 
-.about
-{
-  margin-bottom: 50px; 
+.about {
+  margin-bottom: 50px;
 }
-.about:last-child
-{
-  margin-bottom: 0; 
+
+.about:last-child {
+  margin-bottom: 0;
 }
-.titulo2
-{
+
+.titulo2 {
   color: #003147;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 10px;
 }
-p{
-  color:#333
+
+p {
+  color: #333;
 }
 
-.about .caja
-{
-  display: flex; 
+.caja {
+  display: flex;
   flex-direction: row;
-  margin: 20px 0; 
+  margin: 20px 0;
 }
-.about .caja .year_compania
-{
+
+.year_compania {
   min-width: 150px;
 }
-.about .caja .year_compania
-h5 {
+
+.year_compania h5 {
   text-transform: uppercase;
   color: #848c90;
   font-weight: 600;
 }
-.about .caja .texto  
-h4{
+
+.texto h4 {
   text-transform: uppercase;
   color: #2a7da2;
   font-size: 21px;
 }
-.referencias .caja
-{
-  display: flex; 
-  flex-direction: row;
-  margin: 20px 2px 20px ; 
+
+.referencias .caja {
+  margin: 20px 2px 20px;
 }
 
-.referencias .caja .empleador_telefono
-{
+.empleador_telefono {
   min-width: 150px;
 }
 
-.referencias .caja .empleador_telefono
-h5 {
+.empleador_telefono h5 {
   text-transform: uppercase;
   color: #848c90;
   font-weight: 600;
   margin: 2px 20px 0px 48px;
 }
-.referencias .caja .texto  
-h4{
-  text-transform: uppercase;
-  color: #2a7da2;
-  font-size: 16px;
-}
 
-
-
-
-.habilidades .caja
-{
-  position: relative;
-  width: 100%;
+.habilidades .caja {
   display: grid;
   grid-template-columns: 150px 1fr;
   justify-content: center;
   align-items: center;
 }
-.habilidades .caja 
-h4{
+
+.habilidades .caja h4 {
   text-transform: uppercase;
   color: #848c99;
-  font-weight: 500; 
+  font-weight: 500;
 }
-.habilidades .caja .porcentaje
-{
+
+.habilidades .caja .porcentaje {
   position: relative;
   width: 100%;
   height: 10px;
   background: #f0f0f0;
 }
-.habilidades .caja .porcentaje 
-div{
+
+.habilidades .caja .porcentaje div {
   position: absolute;
-  top 0;
+  top: 0;
   left: 0;
   height: 100%;
-  background: #03a9f4;  
+  background: #03a9f4;
+}
+
+/* Nueva clase para las bolitas de porcentaje */
+.ContactoInfo.idiomas .porcentaje {
+  display: flex;
+  gap: 5px;
+}
+
+.ContactoInfo.idiomas .porcentaje .bolita {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #081921;
+}
+
+.ContactoInfo.idiomas .porcentaje .bolita.activa {
+  background: #03a9f4;
 }
 
 .intereses li {
@@ -275,16 +238,14 @@ div{
   padding: 2px 50px 20px 20px;
 }
 
-.intereses ul li
-{
+.intereses ul li {
   list-style: none;
   color: #333;
   font-weight: 500;
   margin: 22px 22px;
 }
 
-.intereses ul li .fa
-{
+.intereses ul li .fa {
   color: #03a9f4;
   font-size: 18px;
   width: 20px;
