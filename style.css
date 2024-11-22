@@ -87,10 +87,15 @@ body {
   list-style: none;
 }
 
+
 .ContactoInfo ul li {
   position: relative;
   margin: 10px;
   cursor: pointer;
+}
+
+.ContactoInfo.idiomas ul li span.texto {
+  color: white;
 }
 
 .icono {
