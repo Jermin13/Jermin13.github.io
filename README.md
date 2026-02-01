@@ -48,6 +48,34 @@ El objetivo principal de este repositorio es proporcionar una base sólida, de a
    npm run dev
    ```
 
+### Despliegue en GitHub Pages
+
+Para desplegar este portafolio en GitHub Pages, sigue estos pasos:
+
+1. **Configurar el Repositorio**:
+   - Tu repositorio en GitHub debe llamarse `tu-usuario.github.io`.
+
+2. **Instalar la dependencia de despliegue**:
+   ```bash
+   npm install gh-pages --save-dev
+   ```
+
+3. **Configurar scripts en `package.json`**:
+   Añade estas líneas a la sección `"scripts"`:
+   ```json
+   "predeploy": "npm run build",
+   "deploy": "gh-pages -d dist"
+   ```
+
+4. **Desplegar**:
+   Ejecuta el siguiente comando:
+   ```bash
+   npm run deploy
+   ```
+
+5. **Configuración en GitHub**:
+   En tu repositorio de GitHub, ve a **Settings > Pages** y asegúrate de que la fuente esté configurada para la rama `gh-pages`.
+
 ### Personalización
 
 Para personalizar este portafolio, sigue estos pasos:
