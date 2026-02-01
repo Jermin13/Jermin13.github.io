@@ -53,28 +53,41 @@ El objetivo principal de este repositorio es proporcionar una base sólida, de a
 Para desplegar este portafolio en GitHub Pages, sigue estos pasos:
 
 1. **Configurar el Repositorio**:
-   - Tu repositorio en GitHub debe llamarse `tu-usuario.github.io`.
+   - Tu repositorio en GitHub debe llamarse `tu-usuario.github.io` (o cualquier nombre si es un repositorio de proyecto).
 
-2. **Instalar la dependencia de despliegue**:
+2. **Instalar la dependencia de despliegue** (ya incluida en este repo):
    ```bash
    npm install gh-pages --save-dev
    ```
 
-3. **Configurar scripts en `package.json`**:
-   Añade estas líneas a la sección `"scripts"`:
+3. **Configurar scripts en `package.json`** (ya configurados):
    ```json
-   "predeploy": "npm run build",
-   "deploy": "gh-pages -d dist"
+   "scripts": {
+     "predeploy": "npm run build",
+     "deploy": "gh-pages -d dist"
+   }
    ```
 
 4. **Desplegar**:
-   Ejecuta el siguiente comando:
+   Ejecuta el siguiente comando para compilar y subir a la rama `gh-pages`:
    ```bash
    npm run deploy
    ```
 
-5. **Configuración en GitHub**:
-   En tu repositorio de GitHub, ve a **Settings > Pages** y asegúrate de que la fuente esté configurada para la rama `gh-pages`.
+5. **Configuración Final en GitHub**:
+   - Ve a tu repositorio en GitHub.
+   - Entra en **Settings** > **Pages**.
+   - En **Build and deployment**, selecciona la rama `gh-pages` como fuente.
+   - ¡Listo! Tu sitio estará disponible en `https://tu-usuario.github.io/`.
+
+---
+
+### Solución de Problemas (Pantalla en Blanco)
+
+Si al entrar a tu URL ves una pantalla en blanco:
+1. Asegúrate de que `vite.config.js` tenga la propiedad `base: './'`.
+2. Verifica que en GitHub Settings > Pages la rama seleccionada sea `gh-pages`.
+3. Revisa la consola del navegador (F12) para ver si hay errores de carga de archivos (404). Normalmente se soluciona ejecutando `npm run deploy` de nuevo.
 
 ### Personalización
 
