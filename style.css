@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1000px;
+  background: #fff;
+  margin: 50px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+
+.container .lado_izquierdo {
+  position: relative;
+  background: #003147;
+  padding: 40px;
+}
+
+.perfil_texto {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.perfil_imagen {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.perfil_imagen img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.estilo_texto_perfil {
+  color: #fff;
+  font-size: 1.5em;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+
+.estilo_texto_perfil span {
+  font-size: 0.8em;
+  font-weight: 200;
+}
+
+.ContactoInfo {
+  padding-top: 40px;
+}
+
+.titulo {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.ContactoInfo ul {
+  position: relative;
+  list-style: none;
+}
+
+
+.ContactoInfo ul li {
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.ContactoInfo.idiomas ul li span.texto {
+  color: white;
+}
+
+.icono {
+  display: inline-block;
+  width: 30px;
+  font-size: 18px;
+  color: #03a9f4;
+}
+
+.texto_icono {
+  color: #fff;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.ContactoInfo.educacion li {
+  margin-bottom: 15px;
+}
+
+.ContactoInfo.educacion h5 {
+  color: #03a9f4;
+  font-weight: 500;
+}
+
+.ContactoInfo.educacion h4 {
+  color: #fff;
+  font-weight: 100;
+}
+
+.ContactoInfo.educacion h4:nth-child(2) {
+  font-weight: 600;
+}
+
+.container .lado_derecho {
+  position: relative;
+  background: #fff;
+  padding: 40px;
+}
+
+.about {
+  margin-bottom: 50px;
+}
+
+.about:last-child {
+  margin-bottom: 0;
+}
+
+.titulo2 {
+  color: #003147;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #333;
+}
+
+.caja {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+}
+
+.year_compania {
+  min-width: 150px;
+}
+
+.year_compania h5 {
+  text-transform: uppercase;
+  color: #848c90;
+  font-weight: 600;
+}
+
+.texto h4 {
+  text-transform: uppercase;
+  color: #2a7da2;
+  font-size: 21px;
+}
+
+.referencias .caja {
+  margin: 20px 2px 20px;
+}
+
+.empleador_telefono {
+  min-width: 150px;
+}
+
+.empleador_telefono h5 {
+  text-transform: uppercase;
+  color: #848c90;
+  font-weight: 600;
+  margin: 2px 20px 0px 48px;
+}
+
+.habilidades .caja {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.habilidades .caja h4 {
+  text-transform: uppercase;
+  color: #848c99;
+  font-weight: 500;
+}
+
+.habilidades .caja .porcentaje {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: #f0f0f0;
+}
+
+.habilidades .caja .porcentaje div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #03a9f4;
+}
+
+
+.intereses li {
+  display: inline-block;
+  font-size: 18px;
+  letter-spacing: 2px;
+  padding: 2px 50px 20px 20px;
+}
+
+.intereses ul li {
+  list-style: none;
+  color: #333;
+  font-weight: 500;
+  margin: 22px 22px;
+}
+
+.intereses ul li .fa {
+  color: #03a9f4;
+  font-size: 18px;
+  width: 20px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px #848c90;
+  display: inline-block;
+  margin-right: 5px;
+  background-color: #848c90; /* Color gris para los círculos no pintados */
+}
+
+.filled {
+  background-color: #03a9f4; /* Color azul para los círculos pintados */
+}
+
+.circle-container {
+  display: flex;
+  gap: 5px; /* Espaciado entre los círculos */
+}
