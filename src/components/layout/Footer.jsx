@@ -46,8 +46,7 @@ function Footer() {
                     <div className="flex items-center gap-4">
                         <a
                             href="/cv/Jermin%20Shadin%20Vasquez%20Torres%20-%20CV.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            download
                             className="text-sm font-medium text-primary hover:underline flex items-center gap-1"
                         >
                             <FileText className="w-4 h-4" />
