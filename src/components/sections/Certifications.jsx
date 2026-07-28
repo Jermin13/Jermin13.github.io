@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
 import { GraduationCap, Award, Shield, Code, Brain, Bot } from 'lucide-react'
 import { useLanguage } from '@/i18n'
+import certEspoch from '@/assets/images/certificates/cert_espoch.png'
+import certEURACE from '@/assets/images/certificates/EURACE_logo.png'
 
 function Certifications() {
     const { language, t } = useLanguage()
@@ -8,51 +10,13 @@ function Certifications() {
     const certifications = [
         {
             id: 1,
-            title: language === 'en'
-                ? 'Web Development: Introduction to HTML and Design Plan'
-                : 'Desarrollo Web: Introducción a HTML y Plan de Diseño',
-            institution: 'ESPOCH',
-            year: '2022',
-            icon: Code,
+            title: 'CS302: Software Engineering',
+            institution: 'Saylor University',
+            year: 'Jul 2026',
+            icon: GraduationCap,
         },
         {
             id: 2,
-            title: language === 'en'
-                ? 'SQL Server Script Development and Optimization'
-                : 'Desarrollo y Optimización de Scripts en SQL Server',
-            institution: 'ESPOCH / ENCUBA S.C.',
-            year: '2023',
-            icon: Code,
-        },
-        {
-            id: 3,
-            title: language === 'en'
-                ? 'Advanced Threat Protection with Microsoft Defender for Identity'
-                : 'Protección contra amenazas avanzadas con Microsoft Defender for Identity',
-            institution: 'ESPOCH / ENCUBA S.C.',
-            year: '2023',
-            icon: Shield,
-        },
-        {
-            id: 4,
-            title: language === 'en'
-                ? 'Hardening and Zero Trust from Zero-T'
-                : 'Hardening y Zero Trust desde Zero-T',
-            institution: 'ESPOCH / ENCUBA S.C.',
-            year: '2023',
-            icon: Shield,
-        },
-        {
-            id: 5,
-            title: language === 'en'
-                ? 'AI Application in Digital Forensics'
-                : 'Aplicación de la Inteligencia Artificial en la Forense Digital',
-            institution: 'ESPOCH / ENCUBA S.C.',
-            year: '2023',
-            icon: Brain,
-        },
-        {
-            id: 6,
             title: language === 'en'
                 ? 'Claude Platform 101 & Claude Code 101'
                 : 'Claude Platform 101 & Claude Code 101',
@@ -61,11 +25,40 @@ function Certifications() {
             icon: Bot,
         },
         {
-            id: 7,
-            title: 'CS302: Software Engineering',
-            institution: 'Saylor University',
-            year: 'Jul 2026',
-            icon: GraduationCap,
+            id: 3,
+            title: language === 'en'
+                ? 'SQL Server Script Development and Optimization'
+                : 'Desarrollo y Optimización de Scripts en SQL Server',
+            institution: 'ESPOCH / ENCUBA S.C.',
+            year: '2023',
+            icon: Code,
+        },
+        {
+            id: 4,
+            title: language === 'en'
+                ? 'Advanced Threat Protection with Microsoft Defender for Identity'
+                : 'Protección contra amenazas avanzadas con Microsoft Defender for Identity',
+            institution: 'ESPOCH / ENCUBA S.C.',
+            year: '2023',
+            icon: Shield,
+        },
+        {
+            id: 5,
+            title: language === 'en'
+                ? 'Hardening and Zero Trust from Zero-T'
+                : 'Hardening y Zero Trust desde Zero-T',
+            institution: 'ESPOCH / ENCUBA S.C.',
+            year: '2023',
+            icon: Shield,
+        },
+        {
+            id: 6,
+            title: language === 'en'
+                ? 'AI Application in Digital Forensics'
+                : 'Aplicación de la Inteligencia Artificial en la Forense Digital',
+            institution: 'ESPOCH / ENCUBA S.C.',
+            year: '2023',
+            icon: Brain,
         },
     ]
 
@@ -78,7 +71,7 @@ function Certifications() {
         },
         {
             id: 2,
-            value: '200%',
+            value: '115%',
             label: t.certifications.growth,
             description: t.certifications.growthDesc,
         },
@@ -109,13 +102,19 @@ function Certifications() {
                         transition={{ duration: 0.6 }}
                         className="bg-gray-50 dark:bg-dark-100 rounded-3xl p-8"
                     >
-                        <div className="flex items-start gap-4 mb-6">
-                            <div className="p-3 bg-primary/10 rounded-xl">
-                                <GraduationCap className="w-8 h-8 text-primary" />
+                        <div className="flex items-start justify-between gap-4 mb-6">
+                            <div className="flex items-start gap-4">
+                                <div className="p-3 bg-primary/10 rounded-xl">
+                                    <GraduationCap className="w-8 h-8 text-primary" />
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold mb-1">{t.certifications.education}</h3>
+                                    <p className="text-sm text-gray-500">{t.certifications.educationDesc}</p>
+                                </div>
                             </div>
-                            <div>
-                                <h3 className="text-xl font-bold mb-1">{t.certifications.education}</h3>
-                                <p className="text-sm text-gray-500">{t.certifications.educationDesc}</p>
+                            <div className="flex items-center gap-3 flex-shrink-0">
+                                <img src={certEspoch} alt="ESPOCH" className="h-10 w-auto object-contain" />
+                                <img src={certEURACE} alt="EUR-ACE" className="h-10 w-auto object-contain" />
                             </div>
                         </div>
 

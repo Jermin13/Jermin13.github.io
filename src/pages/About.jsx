@@ -6,7 +6,7 @@ import certEspoch from '@/assets/images/certificates/cert_espoch.png'
 import certEncuba from '@/assets/images/certificates/certificate_incuba.jpg'
 import certAnthropic from '@/assets/images/certificates/anthropoic.jpg'
 import certSaylor from '@/assets/images/certificates/saylor.png'
-import certEURACE from '@/assets/images/certificates/eur-ace.jpg'
+import certEURACE from '@/assets/images/certificates/EURACE_logo.png'
 
 const socialLinks = [
     { icon: X, url: 'https://x.com/Jermin_Shadin', label: 'X' },
@@ -104,51 +104,15 @@ const certifications = [
     },
     {
         id: 2,
-        title: 'Desarrollo Web: Introduccion a HTML y Plan de Diseno',
-        titleEn: 'Web Development: Introduction to HTML and Design Plan',
-        institution: 'ESPOCH',
-        image: certEspoch,
-        year: '2022',
+        title: 'CS302: Software Engineering',
+        titleEn: 'CS302: Software Engineering',
+        institution: 'Saylor University',
+        image: certSaylor,
+        year: 'Jul 2026',
         type: 'certification',
     },
     {
         id: 3,
-        title: 'Desarrollo y Optimizacion de Scripts en SQL Server',
-        titleEn: 'SQL Server Script Development and Optimization',
-        institution: 'ESPOCH / ENCUBA S.C.',
-        image: certEncuba,
-        year: '2023',
-        type: 'certification',
-    },
-    {
-        id: 4,
-        title: 'Proteccion contra amenazas avanzadas con Microsoft Defender for Identity',
-        titleEn: 'Advanced Threat Protection with Microsoft Defender for Identity',
-        institution: 'ESPOCH / ENCUBA S.C.',
-        image: certEncuba,
-        year: '2023',
-        type: 'certification',
-    },
-    {
-        id: 5,
-        title: 'Hardening y Zero Trust desde Zero-T',
-        titleEn: 'Hardening and Zero Trust from Zero-T',
-        institution: 'ESPOCH / ENCUBA S.C.',
-        image: certEncuba,
-        year: '2023',
-        type: 'certification',
-    },
-    {
-        id: 6,
-        title: 'Aplicacion de la Inteligencia Artificial en la Forense Digital',
-        titleEn: 'AI Application in Digital Forensics',
-        institution: 'ESPOCH / ENCUBA S.C.',
-        image: certEncuba,
-        year: '2023',
-        type: 'certification',
-    },
-    {
-        id: 7,
         title: 'Claude Platform 101 & Claude Code 101',
         titleEn: 'Claude Platform 101 & Claude Code 101',
         institution: 'Anthropic',
@@ -157,16 +121,42 @@ const certifications = [
         type: 'certification',
     },
     {
-        id: 8,
-        title: 'CS302: Software Engineering',
-        titleEn: 'CS302: Software Engineering',
-        institution: 'Saylor University',
-        image: certSaylor,
-        year: 'Jul 2026',
+        id: 4,
+        title: 'Desarrollo y Optimizacion de Scripts en SQL Server',
+        titleEn: 'SQL Server Script Development and Optimization',
+        institution: 'ESPOCH / ENCUBA S.C.',
+        image: certEncuba,
+        year: '2023',
+        type: 'certification',
+    },
+    {
+        id: 5,
+        title: 'Proteccion contra amenazas avanzadas con Microsoft Defender for Identity',
+        titleEn: 'Advanced Threat Protection with Microsoft Defender for Identity',
+        institution: 'ESPOCH / ENCUBA S.C.',
+        image: certEncuba,
+        year: '2023',
+        type: 'certification',
+    },
+    {
+        id: 6,
+        title: 'Hardening y Zero Trust desde Zero-T',
+        titleEn: 'Hardening and Zero Trust from Zero-T',
+        institution: 'ESPOCH / ENCUBA S.C.',
+        image: certEncuba,
+        year: '2023',
+        type: 'certification',
+    },
+    {
+        id: 7,
+        title: 'Aplicacion de la Inteligencia Artificial en la Forense Digital',
+        titleEn: 'AI Application in Digital Forensics',
+        institution: 'ESPOCH / ENCUBA S.C.',
+        image: certEncuba,
+        year: '2023',
         type: 'certification',
     },
 ]
-
 
 function About() {
     const { language, t } = useLanguage()
@@ -409,12 +399,27 @@ function About() {
                                 transition={{ delay: index * 0.1 }}
                                 className="bg-white dark:bg-dark rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
                             >
-                                <div className="h-48 bg-gray-100 dark:bg-dark-200 flex items-center justify-center p-8">
-                                    <img
-                                        src={cert.image}
-                                        alt={cert.institution}
-                                        className="max-h-full max-w-full object-contain"
-                                    />
+                                <div className="h-48 bg-gray-100 dark:bg-dark-200 flex items-center justify-center gap-4 p-8">
+                                    {cert.id === 1 ? (
+                                        <>
+                                            <img
+                                                src={cert.image}
+                                                alt={cert.institution}
+                                                className="max-h-full max-w-[45%] object-contain"
+                                            />
+                                            <img
+                                                src={certEURACE}
+                                                alt="EUR-ACE"
+                                                className="max-h-full max-w-[45%] object-contain"
+                                            />
+                                        </>
+                                    ) : (
+                                        <img
+                                            src={cert.image}
+                                            alt={cert.institution}
+                                            className="max-h-full max-w-full object-contain"
+                                        />
+                                    )}
                                 </div>
                                 <div className="p-6">
                                     <h3 className="font-bold text-lg mb-1">
