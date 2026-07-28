@@ -103,8 +103,7 @@ function Hero({ darkMode, toggleDarkMode }) {
                         </Link>
                         <a
                             href="/cv/Jermin%20Shadin%20Vasquez%20Torres%20-%20CV.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            download
                             className="btn btn-primary px-8 py-3 text-sm font-semibold"
                         >
                             <FileText className="w-4 h-4 mr-2" />
