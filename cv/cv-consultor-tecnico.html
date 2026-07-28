@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CV profesional de Jermin Shadin Vasquez Torres, Software Engineer." />
+    <title>Jermin Shadin Vasquez Torres - CV Consultor Técnico</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .resume-layout {
+            grid-template-columns: minmax(0, 22%) minmax(0, 78%);
+        }
+
+        .content-section {
+            padding: 0.55rem 0.7rem;
+        }
+
+        .resume-main-full {
+            display: grid;
+            gap: 0.85rem;
+            align-content: start;
+            width: 100%;
+        }
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 6mm 8mm;
+            }
+
+            .resume-page {
+                width: 100% !important;
+                min-height: auto !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                border: none !important;
+                border-radius: 0 !important;
+                box-shadow: none !important;
+                background: #ffffff !important;
+            }
+
+            .page-break {
+                page-break-before: always !important;
+                break-before: page !important;
+            }
+
+            .resume-layout {
+                grid-template-columns: 22% 78% !important;
+                gap: 4mm !important;
+                margin-top: 3mm !important;
+            }
+
+            .resume-sidebar {
+                gap: 2.5mm !important;
+            }
+
+            .panel {
+                padding: 2mm 2.5mm !important;
+                border-radius: 12px !important;
+            }
+
+            .panel h2 {
+                font-size: 7.5pt !important;
+                margin-bottom: 2mm !important;
+                padding-bottom: 1.2mm !important;
+            }
+
+            .stack-group h3 {
+                font-size: 7.2pt !important;
+                margin-bottom: 0.6mm !important;
+            }
+
+            .stack-group p {
+                font-size: 6.8pt !important;
+                line-height: 1.25 !important;
+            }
+
+            .stack-group+.stack-group {
+                margin-top: 1.5mm !important;
+                padding-top: 1.5mm !important;
+            }
+
+            .simple-list li {
+                font-size: 7pt !important;
+                line-height: 1.25 !important;
+            }
+
+            .simple-list span {
+                font-size: 6.2pt !important;
+            }
+
+            .simple-list {
+                gap: 1.2mm !important;
+            }
+
+            .content-section {
+                padding: 2.5mm 3mm !important;
+                border-radius: 12px !important;
+            }
+
+            .content-section>h2 {
+                font-size: 8pt !important;
+                margin-bottom: 2mm !important;
+                padding-bottom: 1.2mm !important;
+            }
+
+            .content-section p {
+                font-size: 7.5pt !important;
+            }
+
+            .achievement-list {
+                gap: 0.8mm !important;
+            }
+
+            .achievement-list li {
+                font-size: 7.5pt !important;
+                line-height: 1.3 !important;
+            }
+
+            .experience-item+.experience-item {
+                margin-top: 2.5mm !important;
+                padding-top: 2mm !important;
+            }
+
+            .item-header {
+                margin-bottom: 0.8mm !important;
+            }
+
+            .item-header h3 {
+                font-size: 8pt !important;
+            }
+
+            .item-role {
+                font-size: 7.2pt !important;
+            }
+
+            .item-meta {
+                font-size: 7pt !important;
+            }
+
+            .resume-main {
+                gap: 2.5mm !important;
+            }
+
+            .resume-main-full {
+                display: grid !important;
+                gap: 2.5mm !important;
+                width: 100% !important;
+            }
+
+            .resume-header {
+                padding: 3mm 4mm !important;
+                gap: 3mm !important;
+                border-radius: 14px !important;
+            }
+
+            .resume-header h1 {
+                font-size: 16pt !important;
+            }
+
+            .eyebrow {
+                font-size: 6pt !important;
+            }
+
+            .headline {
+                font-size: 9pt !important;
+            }
+
+            .contact-list {
+                gap: 1.2mm !important;
+            }
+
+            .contact-list li {
+                font-size: 7.5pt !important;
+            }
+
+            .experience-item,
+            .project-item,
+            .education-item,
+            .panel,
+            .content-section {
+                break-inside: avoid !important;
+                page-break-inside: avoid !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+
+    <div class="resume-page">
+        <header class="resume-header">
+            <div class="resume-header__main">
+                <p class="eyebrow">Currículum Vitae</p>
+                <h1>Jermin Shadin Vasquez Torres</h1>
+                <p class="headline">Software Engineer | Full Stack Developer </p>
+            </div>
+
+            <div class="resume-header__contact">
+                <ul class="contact-list" role="list">
+                    <li>Quito, Ecuador</li>
+                    <li><a href="tel:+593997349143">0997349143</a></li>
+                    <li><a href="mailto:jerminvasquez13@gmail.com">jerminvasquez13@gmail.com</a></li>
+                    <li>
+                        <a href="https://linkedin.com/in/jermin-vasquez-315509264" target="_blank"
+                            rel="noopener noreferrer">
+                            linkedin.com/in/jermin-vasquez-315509264
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Jermin13" target="_blank" rel="noopener noreferrer">
+                            github.com/Jermin13
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://jerminvasquez.netlify.app/" target="_blank" rel="noopener noreferrer">
+                            Portfolio: jerminvasquez.netlify.app
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="resume-layout">
+            <aside class="resume-sidebar" aria-label="Información complementaria">
+                <section class="panel">
+                    <h2>Stack técnico</h2>
+
+                    <div class="stack-group">
+                        <h3>Desarrollo Full Stack</h3>
+                        <p>Python, Django, Django REST Framework, React, Node.js, Express, REST APIs, JWT, PostgreSQL
+                        </p>
+                    </div>
+
+                    <div class="stack-group">
+                        <h3>Datos, BI & Automatización</h3>
+                        <p>ETL, Modelado Dimensional (Kimball), KPIs, Google Sheets, Chart.js, Celery, Redis,
+                            automatización inteligente</p>
+                    </div>
+
+                    <div class="stack-group">
+                        <h3>Calidad, DevOps & Despliegue</h3>
+                        <p>Docker, Git, GitHub Actions, CI/CD, pytest, JMeter, SonarCloud, Testing, DigitalOcean</p>
+                    </div>
+
+                    <div class="stack-group">
+                        <h3>Arquitectura de Software</h3>
+                        <p>Microservicios, Clean Architecture, RBAC, Multi-Tenant, APIs Escalables</p>
+                    </div>
+
+                    <div class="stack-group">
+                        <h3>Modelos de Lenguaje (LLM)</h3>
+                        <p>Claude (Opus, Flash), GPT-5, DeepSeek R1, Qwen, Kimi, Ollama</p>
+                    </div>
+
+                    <div class="stack-group">
+                        <h3>MCP & Agentes</h3>
+                        <p>Node.js MCP SDK, servidores MCP personalizados, agentes conversacionales locales</p>
+                    </div>
+
+                    <div class="stack-group">
+                        <h3>Consultoría Funcional</h3>
+                        <p>Análisis de procesos, relevamiento de requisitos F/NF, casos de uso IA, documentación técnica
+                        </p>
+                    </div>
+
+                    <div class="stack-group">
+                        <h3>Metodología Ágil</h3>
+                        <p>Scrum, Scrumban, sprints, historias de usuario, requisitos funcionales y no funcionales</p>
+                    </div>
+                </section>
+
+                <section class="panel">
+                    <h2>Certificaciones</h2>
+                    <ul class="simple-list">
+                        <li>Desarrollo y Optimización de Scripts en SQL Server <span>ESPOCH / ENCUBA S.C.</span></li>
+                        <li>Protección contra Amenazas Avanzadas con Microsoft Defender for Identity <span>ESPOCH /
+                                ENCUBA S.C.</span></li>
+                        <li>Claude Platform 101 & Claude Code 101 <span>Anthropic · cursos introductorios</span></li>
+                        <li>CS302: Software Engineering <span>Saylor University · Jul 2026 · ID: 9584182803JV</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="panel">
+                    <h2>Idiomas</h2>
+                    <ul class="simple-list">
+                        <li>Español — Nativo</li>
+                        <li>Inglés — B1 <span>(en preparación para certificación B2)</span></li>
+                    </ul>
+                </section>
+            </aside>
+
+            <main id="contenido-principal" class="resume-main">
+                <section class="content-section">
+                    <h2>Resumen profesional</h2>
+                    <p>Ingeniero de Software con experiencia en desarrollo Full Stack y automatización de procesos, con
+                        participación en proyectos corporativos de análisis de requerimientos, optimización operativa e
+                        integración de soluciones web. He trabajado con Python, Django, React, PostgreSQL y herramientas
+                        de despliegue y testing, enfocándome en generar soluciones prácticas, escalables y alineadas al
+                        negocio.</p>
+                </section>
+
+                <section class="content-section">
+                    <h2>Logros destacados</h2>
+                    <ul class="achievement-list" style="margin-bottom: 0;">
+                        <li>Diseñé e implementé un servidor MCP (Model Context Protocol) con <strong>Node.js +
+                                Ollama</strong> para detección automatizada de clientes potenciales en el área comercial
+                            de Swissport, procesando correos electrónicos con un modelo local.</li>
+                        <li>Formulé un proyecto de agente conversacional local basado en <strong>Qwen</strong> para
+                            garantizar la confidencialidad de datos sensibles en Swissport, evitando que la información
+                            salga de la organización.</li>
+                        <li>Desarrollo de sistema corporativo utilizado por más de <strong>2.000 empleados</strong>
+                            (RRHH EMSA Line), liderando el relevamiento de requisitos y la transformación digital de
+                            procesos de RRHH.</li>
+                        <li>Reduje el tiempo de generación de reportes en un <strong>99.6%</strong> automatizando la
+                            reportería manual mediante análisis de procesos e identificación de oportunidades de mejora
+                            (Syncro Cargo).</li>
+                        <li>Identificación y ejecución de casos de uso de IA y automatización en procesos corporativos
+                            del sector logístico y aeroportuario.</li>
+                    </ul>
+                </section>
+
+                <section class="content-section">
+                    <h2>Experiencia profesional</h2>
+
+                    <article class="experience-item">
+                        <header class="item-header">
+                            <div>
+                                <h3>Swissport EMSA</h3>
+                                <p class="item-role">Software Engineer</p>
+                            </div>
+                            <p class="item-meta">Dic 2024 – Jun 2026 · Tababela, Ecuador</p>
+                        </header>
+
+                        <p
+                            style="margin-bottom: 0.35rem; font-weight: 600; color: var(--color-text); font-size: var(--text-sm);">
+                            Syncro Cargo – Plataforma de análisis y procesamiento de datos de carga</p>
+                        <ul class="achievement-list">
+                            <li>Realicé el análisis de procesos del área de carga, identificando cuellos de botella en
+                                la generación manual de reportes y proponiendo una solución automatizada basada en ETL y
+                                data analytics.</li>
+                            <li>Reduje el tiempo de generación de reportes en un <strong>99.6%</strong> (de ~3 días de
+                                trabajo manual en hojas de cálculo a 45 segundos de generación automatizada),
+                                automatizando la reportería en PDF, Excel y PowerPoint.</li>
+                            <li>Centralicé información operativa para <strong>12 usuarios</strong> (analistas, jefaturas
+                                de carga, auditoría, gerencia general), mediante una solución Full Stack con React,
+                                Django, PostgreSQL y Chart.js.</li>
+                            <li>Recogí requisitos de KPIs y visualizaciones directamente con la gerencia de carga y los
+                                analistas para alinear los dashboards con las necesidades del negocio.</li>
+                            <li>Mejoré la calidad y disponibilidad de los datos, migrando información desde Google
+                                Sheets hacia PostgreSQL mediante procesos ETL automatizados basados en modelado
+                                dimensional (Kimball).</li>
+                            <li>Optimicé la carga de indicadores en vivo con <strong>Celery y Redis</strong>, evitando
+                                lentitud en los gráficos y autoactualizando los reportes cada 30 min en periodos de
+                                inactividad.</li>
+                        </ul>
+
+                        <p
+                            style="margin: 0.5rem 0 0.35rem; font-weight: 600; color: var(--color-text); font-size: var(--text-sm);">
+                            RRHH Emsa Line – Sistema de gestión para 2.000 empleados</p>
+                        <ul class="achievement-list">
+                            <li>Lideré el relevamiento de requisitos funcionales y no funcionales junto a la gerencia de
+                                RRHH, identificando oportunidades de transformación digital en procesos críticos de
+                                recursos humanos.</li>
+                            <li>Digitalicé procesos críticos de Recursos Humanos para más de 2.000 empleados,
+                                desarrollando una plataforma web corporativa multi-sede.</li>
+                            <li>Coordiné la definición de casos de uso y flujos de trabajo con stakeholders no técnicos,
+                                validando la usabilidad con usuarios finales y el equipo de desarrollo.</li>
+                            <li>Optimicé la gestión de permisos, justificativos médicos y certificados laborales,
+                                automatizando flujos de trabajo de extremo a extremo.</li>
+                            <li>Garanticé trazabilidad completa de las operaciones, implementando auditoría integral y
+                                control granular de roles y permisos.</li>
+                            <li>Soporté múltiples sedes dentro de una misma plataforma, implementando arquitectura
+                                multi-tenant basada en PostgreSQL y Django.</li>
+                        </ul>
+                    </article>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <div class="resume-page page-break">
+        <main class="resume-main-full">
+            <section class="content-section">
+                <h2>Experiencia profesional</h2>
+                <article class="experience-item">
+                    <header class="item-header">
+                        <div>
+                            <h3>Swissport EMSA</h3>
+                            <p class="item-role">Consultor Funcional & AI</p>
+                        </div>
+                        <p class="item-meta">Dic 2024 – Jun 2026 · Tababela, Ecuador</p>
+                    </header>
+
+                    <p
+                        style="margin-bottom: 0.35rem; font-weight: 600; color: var(--color-text); font-size: var(--text-sm);">
+                        MCP para Comercial – Detección inteligente de clientes potenciales</p>
+                    <ul class="achievement-list">
+                        <li>Diseñé e implementé un servidor MCP (Model Context Protocol) con <strong>Node.js +
+                                Ollama</strong> que procesaba correos electrónicos del área comercial de carga,
+                            identificando clientes potenciales según el estado de su carga mediante un modelo local.
+                        </li>
+                        <li>Automaticé el envío de comunicaciones personalizadas a clientes potenciales, reduciendo el
+                            trabajo manual del equipo comercial y aumentando la eficiencia en la captación de clientes.
+                        </li>
+                        <li>Integré modelos de lenguaje locales (Qwen vía Ollama) para el análisis de texto y
+                            clasificación de correos, garantizando que los datos sensibles de Swissport nunca salieran
+                            de la organización.</li>
+                        <li>Documenté la arquitectura del servidor MCP, los flujos de procesamiento y los casos de uso
+                            para facilitar su mantenimiento y escalabilidad.</li>
+                    </ul>
+
+                    <p
+                        style="margin: 0.5rem 0 0.35rem; font-weight: 600; color: var(--color-text); font-size: var(--text-sm);">
+                        Agente Local Qwen – Proyecto de asistente conversacional corporativo</p>
+                    <ul class="achievement-list">
+                        <li>Formulé el proyecto de un agente conversacional basado en <strong>Qwen</strong> (modelo
+                            local vía Ollama) para que los empleados de Swissport pudieran interactuar con datos
+                            corporativos sin que la información salga del perímetro de la organización.</li>
+                        <li>Definí la arquitectura del agente, incluyendo la integración con bases de datos internas, el
+                            motor de RAG (Retrieval-Augmented Generation) y la capa de seguridad para garantizar la
+                            confidencialidad de la información.</li>
+                        <li>Realicé el análisis de factibilidad, la identificación de casos de uso y la estimación de
+                            impacto, presentando el proyecto a la gerencia con documentación técnica y funcional.</li>
+                    </ul>
+                </article>
+
+                <article class="experience-item">
+                    <header class="item-header">
+                        <div>
+                            <h3>Freelance</h3>
+                            <p class="item-role">Full Stack Developer</p>
+                        </div>
+                        <p class="item-meta">Ene 2023 – Mar 2026 · Quito, Ecuador</p>
+                    </header>
+
+                    <p
+                        style="margin-bottom: 0.35rem; font-weight: 600; color: var(--color-text); font-size: var(--text-sm);">
+                        BPJ Bazar / Papelerías Populares – Plataforma Omnicanal</p>
+                    <ul class="achievement-list">
+                        <li>Desarrollé una plataforma unificada Web + Mobile + API (React Native/Expo POS, Django REST
+                            Framework, PostgreSQL) integrando ventas, inventario y facturación.</li>
+                        <li>Operación offline-first con WatermelonDB y sincronización automática; impresión térmica por
+                            Bluetooth y WiFi.</li>
+                        <li>Dashboards en tiempo real que centralizan datos comerciales multi-sucursal para un control
+                            de inventario y ventas más preciso.</li>
+                        <li>Realicé el relevamiento de requisitos con los dueños del negocio, identificando
+                            oportunidades de mejora en los procesos de inventario y facturación.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="content-section">
+                <h2>Proyectos destacados</h2>
+
+                <article class="project-item">
+                    <header class="item-header">
+                        <div>
+                            <h3>La Hueca del Sabor Online</h3>
+                            <p class="item-role">Proyecto de Titulación – ESPOCH</p>
+                        </div>
+                        <p class="item-meta">2026</p>
+                    </header>
+                    <ul class="achievement-list">
+                        <li>Diseñé una arquitectura escalable para gestión de pedidos, inventario y pagos, implementando
+                            un enfoque basado en microservicios.</li>
+                        <li>Desacoplé funcionalidades críticas del sistema, utilizando Node.js, Express, PostgreSQL y
+                            Redis.</li>
+                        <li>Mejoré la mantenibilidad y escalabilidad del sistema, implementando autenticación stateless
+                            mediante JWT.</li>
+                        <li>Simplifiqué despliegues y pruebas en entornos de desarrollo, utilizando Docker Compose y
+                            contenedores independientes.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="content-section">
+                <h2>Educación</h2>
+
+                <article class="education-item">
+                    <header class="item-header">
+                        <div>
+                            <h3>Ingeniero de Software</h3>
+                            <p class="item-role">Escuela Superior Politécnica de Chimborazo (ESPOCH)</p>
+                        </div>
+                        <p class="item-meta">Oct 2020 – Abr 2026 · Riobamba, Ecuador</p>
+                    </header>
+                    <ul class="achievement-list">
+                        <li>Carrera acreditada internacionalmente bajo estándar EUR-ACE.</li>
+                        <li>Proyecto de titulación enfocado en arquitectura de microservicios.</li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

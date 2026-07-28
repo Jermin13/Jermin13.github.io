@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Instagram, X, Linkedin, Github, Mail, Phone } from 'lucide-react'
+import { Instagram, X, Linkedin, Github, Mail, Phone, FileText } from 'lucide-react'
 import { useLanguage } from '@/i18n'
 
 const socialLinks = [
@@ -24,10 +24,10 @@ function Footer() {
                             <Mail className="w-4 h-4 text-gray-500" />
                             <span className="text-sm text-gray-600 dark:text-gray-400">{t.footer.email} :</span>
                             <a
-                                href="mailto:shadinjermin@gmail.com"
+                                href="mailto:jerminvasquez13@gmail.com"
                                 className="text-sm hover:text-primary transition-colors"
                             >
-                                shadinjermin@gmail.com
+                                jerminvasquez13@gmail.com
                             </a>
                         </div>
                         <div className="flex items-center gap-2">
@@ -42,10 +42,21 @@ function Footer() {
                         </div>
                     </div>
 
-                    {/* Right - Social Links */}
-                    <div className="flex items-center gap-2">
-                        <span className="text-sm text-gray-600 dark:text-gray-400 mr-2">{t.footer.social} :</span>
-                        <div className="flex gap-3">
+                    {/* Right - CV Download + Social Links */}
+                    <div className="flex items-center gap-4">
+                        <a
+                            href="/cv/Jermin%20Shadin%20Vasquez%20Torres%20-%20CV.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm font-medium text-primary hover:underline flex items-center gap-1"
+                        >
+                            <FileText className="w-4 h-4" />
+                            {t.footer.downloadCV}
+                        </a>
+                        <span className="text-gray-300 dark:text-gray-600">|</span>
+                        <div className="flex items-center gap-2">
+                            <span className="text-sm text-gray-600 dark:text-gray-400 mr-1">{t.footer.social} :</span>
+                            <div className="flex gap-3">
                             {socialLinks.map((social) => (
                                 <a
                                     key={social.name}
@@ -58,6 +69,7 @@ function Footer() {
                                     <social.icon className="w-4 h-4" />
                                 </a>
                             ))}
+                            </div>
                         </div>
                     </div>
                 </div>

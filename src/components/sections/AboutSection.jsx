@@ -61,7 +61,7 @@ function AboutSection() {
                         {/* Stats */}
                         <div className="grid grid-cols-2 gap-6 mb-8">
                             <div className="bg-gray-50 dark:bg-dark-100 rounded-2xl p-6">
-                                <span className="text-4xl font-bold text-primary">2+</span>
+                                <span className="text-4xl font-bold text-primary">3+</span>
                                 <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                                     {t.about.yearsExp}
                                 </p>
@@ -77,11 +77,11 @@ function AboutSection() {
                         {/* Contact Info */}
                         <div className="space-y-3 mb-8">
                             <a
-                                href="mailto:shadinjermin@gmail.com"
+                                href="mailto:jerminvasquez13@gmail.com"
                                 className="flex items-center gap-3 text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
                             >
                                 <Mail className="w-5 h-5" />
-                                shadinjermin@gmail.com
+                                jerminvasquez13@gmail.com
                             </a>
                             <a
                                 href="tel:+593997349143"

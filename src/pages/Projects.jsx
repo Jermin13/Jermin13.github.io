@@ -4,24 +4,13 @@ import { ArrowUpRight, X } from 'lucide-react'
 import { useLanguage } from '@/i18n'
 
 // Import project images
-import kichwaImg from '@/assets/images/projects/kichwainterpreter.png'
-import smartparkingImg from '@/assets/images/projects/smartparking.jpg'
 import mediagendaImg from '@/assets/images/projects/mediagenda.jpg'
+import smartparkingImg from '@/assets/images/projects/smartparking.jpg'
 import lahuecaImg from '@/assets/images/projects/lahuecadelsabor.jpg'
-import fudempre from '@/assets/images/projects/fudempre.png'
 import swissportImg from '@/assets/images/projects/swissport.png'
+import bpjImg from '@/assets/images/projects/bpj.png'
 
 const allProjects = [
-    {
-        id: 1,
-        title: 'KichwaInterpreter',
-        image: kichwaImg,
-        tags: ['Python', 'Parsing', 'AST', 'Compilers'],
-        category: 'Software',
-        link: '#',
-        github: 'https://github.com/Jermin13',
-        featured: true,
-    },
     {
         id: 2,
         title: 'Smart Parking System',
@@ -39,39 +28,42 @@ const allProjects = [
         tags: ['Mobile', 'UI/UX', 'Prototype', 'Health'],
         category: 'Software',
         link: '#',
-        github: 'https://github.com/Jermin13',
+        github: '#',
+        repoStatus: 'private',
         featured: true,
     },
     {
         id: 4,
         title: 'La Hueca del Sabor',
         image: lahuecaImg,
-        tags: ['Microservicios', 'Docker', 'React', 'Node.js', 'Dialogflow'],
+        tags: ['Microservicios', 'Node.js', 'PostgreSQL', 'Redis', 'Docker', 'JWT'],
         category: 'Full Stack',
         link: '#',
         github: 'https://github.com/Jermin13',
         featured: true,
     },
     {
-        id: 5,
-        title: 'FUDEMPRE Website',
-        image: fudempre,
-        tags: ['HTML', 'CSS', 'JavaScript', 'Web Design'],
-        category: 'Web',
+        id: 6,
+        title: 'Syncro Cargo - Data Platform',
+        image: swissportImg,
+        tags: ['React', 'Django', 'PostgreSQL', 'ETL', 'Chart.js', 'Celery', 'Redis'],
+        category: 'Full Stack',
         link: '#',
         github: '#',
+        repoStatus: 'private',
+        repoNote: 'Código propietario de Swissport EMSA — disponible bajo solicitud',
         featured: true,
+        whiteBg: true,
     },
     {
-        id: 6,
-        title: 'Information Systems and Data Processing',
-        image: swissportImg,
-        tags: ['React', 'Django', 'PostgreSQL', 'Python', 'ETL', 'BI'],
+        id: 7,
+        title: 'BPJ Bazar - Omnichannel Platform',
+        image: bpjImg,
+        tags: ['React Native', 'Django', 'PostgreSQL', 'Offline-first', 'Bluetooth'],
         category: 'Full Stack',
         link: '#',
         github: '#',
         featured: true,
-        whiteBg: true,
     },
 ]
 
@@ -85,9 +77,7 @@ function Projects() {
         { key: 'all', label: t.projectsPage.all },
         { key: 'Software', label: 'Software' },
         { key: 'IoT', label: 'IoT' },
-        { key: 'Backend', label: 'Backend' },
         { key: 'Full Stack', label: 'Full Stack' },
-        { key: 'Web', label: 'Web' },
     ]
 
     const filteredProjects = activeCategory === 'all'
@@ -262,14 +252,27 @@ function Projects() {
                                         <ArrowUpRight className="w-4 h-4 ml-2" />
                                     </a>
                                 )}
-                                <a
-                                    href={selectedProject.github}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="btn btn-outline flex-1"
-                                >
-                                    {t.projectsPage.github}
-                                </a>
+                                {selectedProject.github !== '#' ? (
+                                    <a
+                                        href={selectedProject.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="btn btn-outline flex-1"
+                                    >
+                                        {t.projectsPage.github}
+                                    </a>
+                                ) : selectedProject.repoStatus === 'private' ? (
+                                    <div className="flex-1 flex flex-col items-center gap-1 p-3 bg-gray-50 dark:bg-dark-200 rounded-xl">
+                                        <span className="text-xs font-medium text-gray-500 flex items-center gap-1">
+                                            {t.projectsPage.privateRepo}
+                                        </span>
+                                        {selectedProject.repoNote && (
+                                            <span className="text-[10px] text-gray-400 text-center">
+                                                {selectedProject.repoNote}
+                                            </span>
+                                        )}
+                                    </div>
+                                ) : null}
                             </div>
                         </div>
                     </motion.div>

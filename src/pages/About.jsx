@@ -4,6 +4,9 @@ import { useLanguage } from '@/i18n'
 import profilePhoto from '@/assets/images/profile_photo.jpg'
 import certEspoch from '@/assets/images/certificates/cert_espoch.png'
 import certEncuba from '@/assets/images/certificates/certificate_incuba.jpg'
+import certAnthropic from '@/assets/images/certificates/anthropoic.jpg'
+import certSaylor from '@/assets/images/certificates/saylor.png'
+import certEURACE from '@/assets/images/certificates/eur-ace.jpg'
 
 const socialLinks = [
     { icon: X, url: 'https://x.com/Jermin_Shadin', label: 'X' },
@@ -14,46 +17,77 @@ const socialLinks = [
 
 const skillCategories = [
     {
-        title: 'Lenguajes & Backend',
+        title: 'Full Stack',
+        titleEn: 'Full Stack',
         skills: [
-            { name: 'JavaScript', level: 75 },
-            { name: 'Node.js', level: 80 },
-            { name: 'Python', level: 65 },
-            { name: 'C# / .NET', level: 55 },
-        ]
-    },
-    {
-        title: 'Bases de Datos & BI',
-        skills: [
-            { name: 'SQL / SQL Server', level: 88 },
+            { name: 'Python / Django', level: 80 },
+            { name: 'React / Node.js', level: 85 },
             { name: 'PostgreSQL', level: 85 },
-            { name: 'Power BI', level: 75 },
+            { name: 'REST APIs / JWT', level: 80 },
         ]
     },
     {
-        title: 'Frontend',
+        title: 'Datos / BI',
+        titleEn: 'Data / BI',
         skills: [
-            { name: 'React', level: 85 },
-            { name: 'Vite', level: 80 },
-            { name: 'Tailwind CSS', level: 90 },
-            { name: 'HTML5 / Bootstrap', level: 85 },
+            { name: 'ETL / Kimball', level: 85 },
+            { name: 'Chart.js / KPIs', level: 80 },
+            { name: 'Celery / Redis', level: 75 },
         ]
     },
     {
-        title: 'Herramientas',
+        title: 'DevOps',
+        titleEn: 'DevOps',
         skills: [
-            { name: 'Git / GitHub', level: 85 },
-            { name: 'Docker', level: 70 },
-            { name: 'JMeter', level: 70 },
+            { name: 'Docker', level: 75 },
+            { name: 'Git / CI/CD', level: 85 },
+            { name: 'pytest / JMeter', level: 70 },
+            { name: 'DigitalOcean / SonarCloud', level: 65 },
         ]
     },
     {
-        title: 'Especialidades',
+        title: 'Arquitectura',
+        titleEn: 'Architecture',
         skills: [
-            { name: 'Cybersecurity', level: 43 },
-            { name: 'IoT / YOLOv11', level: 80 },
+            { name: 'Microservicios', level: 75 },
+            { name: 'Clean Architecture', level: 70 },
+            { name: 'RBAC / Multi-Tenant', level: 75 },
         ]
-    }
+    },
+    {
+        title: 'LLMs',
+        titleEn: 'LLMs',
+        skills: [
+            { name: 'Claude (Opus, Flash)', level: 75 },
+            { name: 'DeepSeek / Qwen', level: 70 },
+            { name: 'Ollama', level: 80 },
+        ]
+    },
+    {
+        title: 'MCP & Agentes',
+        titleEn: 'MCP & Agents',
+        skills: [
+            { name: 'Node.js MCP SDK', level: 75 },
+            { name: 'Agentes Conversacionales', level: 70 },
+        ]
+    },
+    {
+        title: 'Consultoría',
+        titleEn: 'Consulting',
+        skills: [
+            { name: 'Análisis de Procesos', level: 80 },
+            { name: 'Relevamiento Reqs.', level: 80 },
+            { name: 'Casos de Uso IA', level: 75 },
+        ]
+    },
+    {
+        title: 'Metodología Ágil',
+        titleEn: 'Agile Methodology',
+        skills: [
+            { name: 'Scrum / Scrumban', level: 80 },
+            { name: 'Sprints / HU', level: 80 },
+        ]
+    },
 ]
 
 const certifications = [
@@ -63,8 +97,10 @@ const certifications = [
         titleEn: 'Software Engineering',
         institution: 'ESPOCH',
         image: certEspoch,
-        year: '2020 - Presente',
+        year: 'Oct 2020 - Abr 2026',
         type: 'education',
+        description: 'Carrera acreditada internacionalmente bajo estándar EUR-ACE. Proyecto de titulación enfocado en arquitectura de microservicios.',
+        descriptionEn: 'Internationally accredited program under EUR-ACE standard. Thesis project focused on microservices architecture.',
     },
     {
         id: 2,
@@ -109,6 +145,24 @@ const certifications = [
         institution: 'ESPOCH / ENCUBA S.C.',
         image: certEncuba,
         year: '2023',
+        type: 'certification',
+    },
+    {
+        id: 7,
+        title: 'Claude Platform 101 & Claude Code 101',
+        titleEn: 'Claude Platform 101 & Claude Code 101',
+        institution: 'Anthropic',
+        image: certAnthropic,
+        year: '2025',
+        type: 'certification',
+    },
+    {
+        id: 8,
+        title: 'CS302: Software Engineering',
+        titleEn: 'CS302: Software Engineering',
+        institution: 'Saylor University',
+        image: certSaylor,
+        year: 'Jul 2026',
         type: 'certification',
     },
 ]
@@ -228,7 +282,7 @@ function About() {
                             >
                                 <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
                                     <span className="w-8 h-1 bg-primary rounded-full"></span>
-                                    {category.title}
+                                    {language === 'en' && category.titleEn ? category.titleEn : category.title}
                                 </h3>
                                 <div className="space-y-6">
                                     {category.skills.map((skill, skillIndex) => (
@@ -249,6 +303,36 @@ function About() {
                                         </div>
                                     ))}
                                 </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Languages Section */}
+            <section className="section">
+                <div className="container-custom">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-12"
+                    >
+                        <h2 className="heading-lg mb-4">{t.aboutPage.languagesTitle}</h2>
+                    </motion.div>
+
+                    <div className="flex flex-wrap justify-center gap-6 max-w-2xl mx-auto">
+                        {t.aboutPage.languages.map((lang, index) => (
+                            <motion.div
+                                key={lang.name}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                className="bg-gray-50 dark:bg-dark-100 rounded-2xl p-6 text-center flex-1 min-w-[200px]"
+                            >
+                                <h3 className="text-xl font-bold mb-1">{lang.name}</h3>
+                                <p className="text-primary font-medium">{lang.level}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -285,6 +369,15 @@ function About() {
                                 <h3 className="text-xl font-bold mt-1">{exp.title}</h3>
                                 <p className="text-gray-500 dark:text-gray-400">{exp.company}</p>
                                 <p className="text-gray-600 dark:text-gray-400 mt-2">{exp.description}</p>
+                                {exp.highlights && exp.highlights.length > 0 && (
+                                    <ul className="list-disc pl-5 mt-3 space-y-1.5">
+                                        {exp.highlights.map((item, i) => (
+                                            <li key={i} className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                                                {item}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
                             </motion.div>
                         ))}
                     </div>
@@ -351,11 +444,11 @@ function About() {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a
-                                href="mailto:shadinjermin@gmail.com"
+                                href="mailto:jerminvasquez13@gmail.com"
                                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary rounded-full font-medium hover:scale-105 transition-transform"
                             >
                                 <Mail className="w-5 h-5" />
-                                shadinjermin@gmail.com
+                                jerminvasquez13@gmail.com
                             </a>
                             <a
                                 href="tel:+593997349143"
