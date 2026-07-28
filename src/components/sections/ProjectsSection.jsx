@@ -4,20 +4,13 @@ import { ArrowUpRight } from 'lucide-react'
 import { useLanguage } from '@/i18n'
 
 // Import project images
-import kichwaImg from '@/assets/images/projects/kichwainterpreter.png'
+import mediagendaImg from '@/assets/images/projects/mediagenda.jpg'
 import smartparkingImg from '@/assets/images/projects/smartparking.jpg'
 import lahuecaImg from '@/assets/images/projects/lahuecadelsabor.jpg'
-import fudempre from '@/assets/images/projects/fudempre.png'
 import swissportImg from '@/assets/images/projects/swissport.png'
+import bpjImg from '@/assets/images/projects/bpj.png'
 
 const projects = [
-    {
-        id: 1,
-        title: 'KichwaInterpreter',
-        image: kichwaImg,
-        tags: ['Python', 'Parsing', 'AST'],
-        link: 'https://github.com/Jermin13',
-    },
     {
         id: 2,
         title: 'Smart Parking System',
@@ -26,26 +19,33 @@ const projects = [
         link: 'https://github.com/Jermin13',
     },
     {
-        id: 4,
-        title: 'La Hueca del Sabor',
-        image: lahuecaImg,
-        tags: ['React', 'Node.js', 'Docker'],
+        id: 3,
+        title: 'MediAgenda',
+        image: mediagendaImg,
+        tags: ['Mobile', 'UI/UX', 'Prototype'],
         link: 'https://github.com/Jermin13',
     },
     {
-        id: 5,
-        title: 'FUDEMPRE Website',
-        image: fudempre,
-        tags: ['HTML', 'CSS', 'JavaScript'],
-        link: '#',
+        id: 4,
+        title: 'La Hueca del Sabor',
+        image: lahuecaImg,
+        tags: ['Microservicios', 'Node.js', 'Docker'],
+        link: 'https://github.com/Jermin13',
     },
     {
         id: 6,
-        title: 'Sistemas de Información y Procesamiento de Datos',
+        title: 'Syncro Cargo - Data Platform',
         image: swissportImg,
-        tags: ['React', 'Django', 'PostgreSQL', 'BI'],
+        tags: ['React', 'Django', 'ETL', 'BI'],
         link: '#',
         whiteBg: true,
+    },
+    {
+        id: 7,
+        title: 'BPJ Bazar - Omnichannel Platform',
+        image: bpjImg,
+        tags: ['React Native', 'Django', 'Offline-first'],
+        link: '#',
     },
 ]
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Send, User, Mail, MessageSquare, Briefcase, Phone, X, Instagram, Linkedin, Github } from 'lucide-react'
+import { Send, User, Mail, MessageSquare, Briefcase, Phone, X, Instagram, Linkedin, Github, AlertCircle } from 'lucide-react'
 import { useLanguage } from '@/i18n'
 
 const socialLinks = [
@@ -27,6 +27,7 @@ function Contact({ initialService = '' }) {
     }, [initialService])
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [submitted, setSubmitted] = useState(false)
+    const [error, setError] = useState('')
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -35,16 +36,42 @@ function Contact({ initialService = '' }) {
     const handleSubmit = async (e) => {
         e.preventDefault()
         setIsSubmitting(true)
+        setError('')
 
-        // Simulate form submission
-        await new Promise((resolve) => setTimeout(resolve, 1500))
+        try {
+            const SERVICE_ID = 'service_ncmqpg7'
+            const PUBLIC_KEY = 'F4DlgIsgTgiIv9-JM'
+            const TEMPLATE_ID = 'template_puwh38o'
 
-        setIsSubmitting(false)
-        setSubmitted(true)
-        setFormData({ name: '', email: '', service: '', message: '' })
+            const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    service_id: SERVICE_ID,
+                    template_id: TEMPLATE_ID,
+                    user_id: PUBLIC_KEY,
+                    template_params: {
+                        name: formData.name,
+                        email: formData.email,
+                        service: formData.service,
+                        message: formData.message,
+                    }
+                })
+            })
 
-        // Reset submitted state after 5 seconds
-        setTimeout(() => setSubmitted(false), 5000)
+            if (response.ok) {
+                setIsSubmitting(false)
+                setSubmitted(true)
+                setFormData({ name: '', email: '', service: '', message: '' })
+                setTimeout(() => setSubmitted(false), 5000)
+            } else {
+                throw new Error('Failed to send')
+            }
+        } catch (err) {
+            setIsSubmitting(false)
+            setError(t.contact.error || 'Error al enviar. Intenta de nuevo.')
+            setTimeout(() => setError(''), 5000)
+        }
     }
 
     return (
@@ -77,10 +104,10 @@ function Contact({ initialService = '' }) {
                                 <div>
                                     <p className="text-sm text-gray-500">{t.contact.email}</p>
                                     <a
-                                        href="mailto:shadinjermin@gmail.com"
+                                        href="mailto:jerminvasquez13@gmail.com"
                                         className="font-medium hover:text-primary transition-colors"
                                     >
-                                        shadinjermin@gmail.com
+                                        jerminvasquez13@gmail.com
                                     </a>
                                 </div>
                             </div>
@@ -226,6 +253,12 @@ function Contact({ initialService = '' }) {
                                         </div>
                                     </div>
 
+                                    {error && (
+                                        <div className="flex items-center gap-2 p-3 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded-xl text-sm">
+                                            <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                                            {error}
+                                        </div>
+                                    )}
                                     <button
                                         type="submit"
                                         disabled={isSubmitting}

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { GraduationCap, Award, Shield, Code, Brain } from 'lucide-react'
+import { GraduationCap, Award, Shield, Code, Brain, Bot } from 'lucide-react'
 import { useLanguage } from '@/i18n'
 
 function Certifications() {
@@ -50,6 +50,22 @@ function Certifications() {
             institution: 'ESPOCH / ENCUBA S.C.',
             year: '2023',
             icon: Brain,
+        },
+        {
+            id: 6,
+            title: language === 'en'
+                ? 'Claude Platform 101 & Claude Code 101'
+                : 'Claude Platform 101 & Claude Code 101',
+            institution: 'Anthropic',
+            year: '2025',
+            icon: Bot,
+        },
+        {
+            id: 7,
+            title: 'CS302: Software Engineering',
+            institution: 'Saylor University',
+            year: 'Jul 2026',
+            icon: GraduationCap,
         },
     ]
 
@@ -109,7 +125,13 @@ function Certifications() {
                                 {language === 'en' ? 'Software Engineering' : 'Ingeniería de Software'}
                             </p>
                             <p className="text-sm text-gray-500">
-                                {language === 'en' ? '8th Semester (2020 - Present)' : 'Octavo Semestre (2020 - Presente)'}
+                                {language === 'en' ? 'Oct 2020 - Apr 2026' : 'Oct 2020 - Abr 2026'}
+                            </p>
+                            <p className="text-xs text-gray-400 mt-2">
+                                {language === 'en' ? 'EUR-ACE accredited program' : 'Acreditación internacional EUR-ACE'}
+                            </p>
+                            <p className="text-xs text-gray-400">
+                                {language === 'en' ? 'Thesis: Microservices architecture' : 'Tesis: Arquitectura de microservicios'}
                             </p>
                         </div>
                     </motion.div>

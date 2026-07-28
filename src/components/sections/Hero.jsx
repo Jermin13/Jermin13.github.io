@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import { Hand } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Hand, ArrowUpRight, FileText } from 'lucide-react'
 import { useLanguage } from '@/i18n'
 import profilePhoto from '@/assets/images/profile_photo.jpg'
 
@@ -84,17 +85,38 @@ function Hero({ darkMode, toggleDarkMode }) {
                     </motion.div>
                 </div>
 
-                {/* Theme Toggle Switch - Bottom center */}
+                {/* CTAs + Theme Toggle */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1 }}
-                    className="flex justify-center mt-12 lg:mt-16"
+                    transition={{ delay: 0.8 }}
+                    className="flex flex-col items-center mt-12 lg:mt-16 gap-6"
                 >
+                    {/* CTA Buttons */}
+                    <div className="flex flex-wrap justify-center gap-4">
+                        <Link
+                            to="/projects"
+                            className="btn btn-primary px-8 py-3 text-sm font-semibold"
+                        >
+                            {t.hero.viewProjects}
+                            <ArrowUpRight className="w-4 h-4 ml-2" />
+                        </Link>
+                        <a
+                            href="/cv/Jermin%20Shadin%20Vasquez%20Torres%20-%20CV.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn btn-primary px-8 py-3 text-sm font-semibold"
+                        >
+                            <FileText className="w-4 h-4 mr-2" />
+                            {t.hero.downloadCV}
+                        </a>
+                    </div>
+
+                    {/* Dark Mode Toggle */}
                     <button
                         onClick={toggleDarkMode}
                         className={`
-                            relative w-14 h-7 rounded-full transition-colors duration-300
+                            relative w-12 h-6 rounded-full transition-colors duration-300
                             ${darkMode ? 'bg-gray-600' : 'bg-gray-300'}
                         `}
                         aria-label="Toggle dark mode"
@@ -103,8 +125,8 @@ function Hero({ darkMode, toggleDarkMode }) {
                             layout
                             transition={{ type: "spring", stiffness: 500, damping: 30 }}
                             className={`
-                                absolute top-1 w-5 h-5 rounded-full bg-white shadow-md
-                                ${darkMode ? 'left-8' : 'left-1'}
+                                absolute top-0.5 w-5 h-5 rounded-full bg-white shadow-md
+                                ${darkMode ? 'left-6' : 'left-0.5'}
                             `}
                         />
                     </button>
