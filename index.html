@@ -4,28 +4,70 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Jermin Vasquez - Software Engineer | Full Stack Developer. Especializado en Python, Django, React, Node.js, MCP, IA local, automatización de procesos corporativos y BI." />
+    <meta name="description" content="Jermin Vasquez - Desarrollador de Software Full Stack en Quito, Ecuador. Especializado en Python, Django, React, Node.js, MCP, IA local, automatización de procesos corporativos y BI." />
     <meta name="keywords" content="software engineer, full stack developer, react, django, python, nodejs, mcp, artificial intelligence, bi, data analytics, portafolio, jermin vasquez" />
     <meta name="author" content="Jermin Shadin Vasquez Torres" />
 
     <!-- Open Graph / Social Preview -->
-    <meta property="og:title" content="Jermin Vasquez | Software Engineer" />
-    <meta property="og:description" content="Software Engineer especializado en Full Stack, automatización, IA local y MCP. Python, Django, React, PostgreSQL." />
-    <meta property="og:image" content="https://jermin13.github.io/og-image.jpg" />
-    <meta property="og:url" content="https://jermin13.github.io/" />
+    <meta property="og:title" content="Jermin Vasquez | Desarrollador de Software en Quito" />
+    <meta property="og:description" content="Desarrollador de Software Full Stack en Quito, Ecuador. Python, Django, React, PostgreSQL, automatización, IA local y MCP." />
+    <meta property="og:image" content="https://jerminvasquez.netlify.app/og-image.jpg" />
+    <meta property="og:url" content="https://jerminvasquez.netlify.app/" />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="es_ES" />
+    <meta property="og:locale" content="es_EC" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Jermin Vasquez | Software Engineer" />
-    <meta name="twitter:description" content="Software Engineer especializado en Full Stack, automatización, IA local y MCP." />
-    <meta name="twitter:image" content="https://jermin13.github.io/og-image.jpg" />
+    <meta name="twitter:title" content="Jermin Vasquez | Desarrollador de Software en Quito" />
+    <meta name="twitter:description" content="Desarrollador de Software Full Stack en Quito, Ecuador." />
+    <meta name="twitter:image" content="https://jerminvasquez.netlify.app/og-image.jpg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <title>Jermin Vasquez | Software Engineer</title>
+    <!-- Canonical de cada idioma (M7): URL real /en/ indexable, español en / -->
+    <link rel="alternate" hreflang="es" href="https://jerminvasquez.netlify.app/" />
+    <link rel="alternate" hreflang="en" href="https://jerminvasquez.netlify.app/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://jerminvasquez.netlify.app/" />
+    <title>Jermin Vasquez | Desarrollador de Software en Quito</title>
+
+    <!-- Google Analytics 4 (GA4) - M1 -->
+    <!-- TODO: Reemplaza G-C00Q0HHHB9 por tu Measurement ID real (ajustes de Google Analytics: Admin > Data Streams). -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C00Q0HHHB9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-C00Q0HHHB9', {
+            send_page_view: false, // Desactivado: los pageviews los dispara el hook SPA en App.jsx
+        });
+    </script>
+  <!-- Structured Data (JSON-LD) - M4. Nota: para ampliar sameAs, añade aquí tu LinkedIn y redes, p. ej. "https://www.linkedin.com/in/tu-usuario" -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Person",
+                "name": "Jermin Shadin Vasquez Torres",
+                "jobTitle": "Software Engineer",
+                "url": "https://jerminvasquez.netlify.app/",
+                "image": "https://jerminvasquez.netlify.app/og-image.jpg",
+                "worksFor": { "@type": "Organization", "name": "Swissport EMSA" },
+                "sameAs": [
+                    "https://github.com/Jermin13",
+                    "https://www.linkedin.com/in/jermin-vasquez-315509264",
+                    "https://x.com/Jermin_Shadin"
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "name": "Jermin Vasquez | Desarrollador de Software en Quito",
+                "url": "https://jerminvasquez.netlify.app/"
+            }
+        ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
