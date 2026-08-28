@@ -15,8 +15,8 @@ import Cursor from './components/ui/Cursor'
 // SEO on-page: title + description únicos por ruta y por idioma (M6)
 const PAGE_META = {
     home: {
-        es: { title: 'Jermin Vasquez | Software Engineer', description: 'Software Engineer y Full Stack Developer. Python, Django, React, Node.js, MCP, IA local, automatización corporativa y BI. Portafolio, proyectos y contacto.' },
-        en: { title: 'Jermin Vasquez | Software Engineer', description: 'Software Engineer and Full Stack Developer. Python, Django, React, Node.js, MCP, local AI, corporate automation and BI. Portfolio, projects and contact.' },
+        es: { title: 'Jermin Vasquez | Desarrollador de Software en Quito', description: 'Desarrollador de Software Full Stack en Quito, Ecuador. Python, Django, React, Node.js, MCP, IA local, automatización de procesos corporativos y BI. Portafolio, proyectos y contacto.' },
+        en: { title: 'Jermin Vasquez | Software Engineer in Quito', description: 'Software Engineer and Full Stack Developer in Quito, Ecuador. Python, Django, React, Node.js, MCP, local AI, corporate automation and BI. Portfolio, projects and contact.' },
     },
     about: {
         es: { title: 'Jermin Vasquez | Sobre mí', description: 'Ingeniero de Software en Quito, Ecuador. Experiencia en desarrollo Full Stack, automatización de procesos, React, Django y PostgreSQL.' },
