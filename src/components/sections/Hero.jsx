@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Hand, ArrowUpRight, FileText } from 'lucide-react'
 import { useLanguage } from '@/i18n'
-import profilePhoto from '@/assets/images/profile_photo.jpg'
+import profilePhoto from '@/assets/images/profile_photo.webp'
 
 function Hero({ darkMode, toggleDarkMode }) {
     const { t } = useLanguage()

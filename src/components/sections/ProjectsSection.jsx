@@ -4,11 +4,11 @@ import { ArrowUpRight } from 'lucide-react'
 import { useLanguage } from '@/i18n'
 
 // Import project images
-import mediagendaImg from '@/assets/images/projects/mediagenda.jpg'
-import smartparkingImg from '@/assets/images/projects/smartparking.jpg'
+import mediagendaImg from '@/assets/images/projects/mediagenda.webp'
+import smartparkingImg from '@/assets/images/projects/smartparking.webp'
 import lahuecaImg from '@/assets/images/projects/lahuecadelsabor.jpg'
-import swissportImg from '@/assets/images/projects/swissport.png'
-import bpjImg from '@/assets/images/projects/bpj.png'
+import swissportImg from '@/assets/images/projects/swissport.webp'
+import bpjImg from '@/assets/images/projects/bpj.webp'
 
 const projects = [
     {

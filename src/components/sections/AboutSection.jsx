@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { X, Instagram, Linkedin, Github, Mail, Phone } from 'lucide-react'
 import { useLanguage } from '@/i18n'
-import profilePhoto from '@/assets/images/profile_photo.jpg'
+import profilePhoto from '@/assets/images/profile_photo.webp'
 
 const socialLinks = [
     { icon: X, url: 'https://x.com/Jermin_Shadin', label: 'X' },

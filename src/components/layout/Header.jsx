@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Sun, Moon, Languages } from 'lucide-react'
 import { useLanguage } from '@/i18n'
-import profilePhoto from '@/assets/images/profile_photo.jpg'
+import profilePhoto from '@/assets/images/profile_photo.webp'
 
 function Header({ darkMode, toggleDarkMode }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
