@@ -7,7 +7,26 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import NotFound from './pages/NotFound'
 
+import { useLanguage } from '@/i18n'
+import { usePageMeta } from '@/hooks/usePageMeta'
+
 import Cursor from './components/ui/Cursor'
+
+// SEO on-page: title + description únicos por ruta y por idioma (M6)
+const PAGE_META = {
+    home: {
+        es: { title: 'Jermin Vasquez | Software Engineer', description: 'Software Engineer y Full Stack Developer. Python, Django, React, Node.js, MCP, IA local, automatización corporativa y BI. Portafolio, proyectos y contacto.' },
+        en: { title: 'Jermin Vasquez | Software Engineer', description: 'Software Engineer and Full Stack Developer. Python, Django, React, Node.js, MCP, local AI, corporate automation and BI. Portfolio, projects and contact.' },
+    },
+    about: {
+        es: { title: 'Jermin Vasquez | Sobre mí', description: 'Ingeniero de Software en Quito, Ecuador. Experiencia en desarrollo Full Stack, automatización de procesos, React, Django y PostgreSQL.' },
+        en: { title: 'Jermin Vasquez | About', description: 'Software Engineer in Quito, Ecuador. Experience in Full Stack development, process automation, React, Django and PostgreSQL.' },
+    },
+    projects: {
+        es: { title: 'Jermin Vasquez | Proyectos', description: 'Proyectos de Jermin Vasquez: aplicaciones web, visión artificial con YOLOv11, IoT, BI con metodología Kimball y plataformas omnicanal.' },
+        en: { title: 'Jermin Vasquez | Projects', description: "Jermin Vasquez's projects: web apps, computer vision with YOLOv11, IoT, BI with Kimball methodology and omnichannel platforms." },
+    },
+}
 
 function App() {
     // SPA pageview tracking (GA4) - fires on every route change, not just initial load
@@ -17,6 +36,12 @@ function App() {
             page_path: location.pathname + location.search,
         })
     }, [location])
+
+    // SEO on-page: title/description por ruta y por idioma (M6)
+    const { language } = useLanguage()
+    const pageKey = location.pathname === '/about' ? 'about' : location.pathname === '/projects' ? 'projects' : 'home'
+    const meta = PAGE_META[pageKey][language] || PAGE_META[pageKey].es
+    usePageMeta({ title: meta.title, description: meta.description })
 
     const [darkMode, setDarkMode] = useState(() => {
         const saved = localStorage.getItem('darkMode')
