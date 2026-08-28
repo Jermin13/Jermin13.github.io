@@ -38,6 +38,30 @@
             send_page_view: false, // Desactivado: los pageviews los dispara el hook SPA en App.jsx
         });
     </script>
+  <!-- Structured Data (JSON-LD) - M4. Nota: para ampliar sameAs, añade aquí tu LinkedIn y redes, p. ej. "https://www.linkedin.com/in/tu-usuario" -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Person",
+                "name": "Jermin Shadin Vasquez Torres",
+                "jobTitle": "Software Engineer",
+                "url": "https://jerminvasquez.netlify.app/",
+                "image": "https://jerminvasquez.netlify.app/og-image.jpg",
+                "worksFor": { "@type": "Organization", "name": "Swissport EMSA" },
+                "sameAs": [
+                    "https://github.com/Jermin13"
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "name": "Jermin Vasquez | Software Engineer",
+                "url": "https://jerminvasquez.netlify.app/"
+            }
+        ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
