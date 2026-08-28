@@ -10,7 +10,7 @@ const socialLinks = [
 ]
 
 function Footer() {
-    const { t } = useLanguage()
+    const { t, localize } = useLanguage()
     const currentYear = new Date().getFullYear()
 
     return (
@@ -81,7 +81,7 @@ function Footer() {
 
                     {/* Available for work badge */}
                     <Link
-                        to="/#contact"
+                        to={localize('/#contact')}
                         className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors"
                     >
                         <span className="relative flex h-2 w-2">

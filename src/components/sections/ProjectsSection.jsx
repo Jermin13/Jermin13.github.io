@@ -52,7 +52,7 @@ const projects = [
 
 
 function ProjectsSection() {
-    const { language, t } = useLanguage()
+    const { language, localize, t } = useLanguage()
 
     // Get translated description for a project
     const getProjectDescription = (projectId) => {
@@ -77,7 +77,7 @@ function ProjectsSection() {
                         </p>
                     </div>
                     <Link
-                        to="/projects"
+                        to={localize('/projects')}
                         className="btn btn-outline"
                     >
                         {t.projects.viewAll}

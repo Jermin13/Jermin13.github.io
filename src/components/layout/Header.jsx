@@ -9,12 +9,12 @@ function Header({ darkMode, toggleDarkMode }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const location = useLocation()
     const navigate = useNavigate()
-    const { language, toggleLanguage, t } = useLanguage()
+    const { language, switchTo, localize, t } = useLanguage()
 
     const navLinks = [
-        { name: t.nav.home, path: '/' },
-        { name: t.nav.about, path: '/about' },
-        { name: t.nav.projects, path: '/projects' },
+        { name: t.nav.home, path: localize('/') },
+        { name: t.nav.about, path: localize('/about') },
+        { name: t.nav.projects, path: localize('/projects') },
     ]
 
     const isActive = (path) => location.pathname === path
@@ -32,7 +32,7 @@ function Header({ darkMode, toggleDarkMode }) {
             }
         } else {
             // Navigate to home first, then scroll
-            navigate('/')
+            navigate(localize('/'))
             // Use setTimeout to wait for navigation
             setTimeout(() => {
                 const contactSection = document.getElementById('contact')
@@ -130,7 +130,7 @@ function Header({ darkMode, toggleDarkMode }) {
                     <motion.div layout className={`flex items-center ${isCompact ? 'gap-2' : 'gap-3 justify-end'}`}>
                         {/* Language Toggle */}
                         <button
-                            onClick={toggleLanguage}
+                            onClick={() => switchTo(language === 'es' ? 'en' : 'es')}
                             className={`flex items-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-dark-100 transition-all duration-300 hover:scale-105 ${isCompact ? 'px-2 py-1' : 'px-3 py-1.5'
                                 }`}
                             aria-label="Toggle language"

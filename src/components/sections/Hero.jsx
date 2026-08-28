@@ -5,7 +5,7 @@ import { useLanguage } from '@/i18n'
 import profilePhoto from '@/assets/images/profile_photo.webp'
 
 function Hero({ darkMode, toggleDarkMode }) {
-    const { t } = useLanguage()
+    const { t, localize } = useLanguage()
 
     return (
         <section className="min-h-screen flex flex-col items-center justify-center pt-24 pb-8 px-4 md:px-8 relative overflow-hidden">
@@ -95,7 +95,7 @@ function Hero({ darkMode, toggleDarkMode }) {
                     {/* CTA Buttons */}
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link
-                            to="/projects"
+                            to={localize('/projects')}
                             className="btn btn-primary px-8 py-3 text-sm font-semibold"
                         >
                             {t.hero.viewProjects}

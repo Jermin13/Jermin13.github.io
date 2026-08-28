@@ -37,9 +37,11 @@ function App() {
         })
     }, [location])
 
-    // SEO on-page: title/description por ruta y por idioma (M6)
+    // SEO on-page: title/description por ruta y por idioma (M6/M7)
+    // Ignora el prefijo /en para resolver la clave de página (rutas en/es comparten componente)
     const { language } = useLanguage()
-    const pageKey = location.pathname === '/about' ? 'about' : location.pathname === '/projects' ? 'projects' : 'home'
+    const basePath = location.pathname.replace(/^\/en/, '') || '/'
+    const pageKey = basePath === '/about' ? 'about' : basePath === '/projects' ? 'projects' : 'home'
     const meta = PAGE_META[pageKey][language] || PAGE_META[pageKey].es
     usePageMeta({ title: meta.title, description: meta.description })
 
@@ -65,9 +67,14 @@ function App() {
             <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
             <main>
                 <Routes>
+                    {/* Español en / */}
                     <Route path="/" element={<Home darkMode={darkMode} toggleDarkMode={toggleDarkMode} />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/projects" element={<Projects />} />
+                    {/* Inglés indexable en /en (M7): mismos componentes, URL real */}
+                    <Route path="/en" element={<Home darkMode={darkMode} toggleDarkMode={toggleDarkMode} />} />
+                    <Route path="/en/about" element={<About />} />
+                    <Route path="/en/projects" element={<Projects />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </main>
