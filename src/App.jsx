@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
@@ -10,6 +10,14 @@ import NotFound from './pages/NotFound'
 import Cursor from './components/ui/Cursor'
 
 function App() {
+    // SPA pageview tracking (GA4) - fires on every route change, not just initial load
+    const location = useLocation()
+    useEffect(() => {
+        window.gtag?.('event', 'page_view', {
+            page_path: location.pathname + location.search,
+        })
+    }, [location])
+
     const [darkMode, setDarkMode] = useState(() => {
         const saved = localStorage.getItem('darkMode')
         return saved !== null ? JSON.parse(saved) : true
